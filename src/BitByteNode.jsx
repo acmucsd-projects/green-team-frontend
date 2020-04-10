@@ -1,4 +1,5 @@
 import React from 'react';
+import './BitByteNode.css'; // Dummy CSS that will be changed later
 
 /** 
  * Representes a node in the bit-byte tree
@@ -7,12 +8,12 @@ import React from 'react';
 class BitByteNode extends React.Component{
     constructor(props){super(props);}
     render(){
-        /* Dummy display mode to see that all variables show up */
         return (
-            <div>
-                <h3> {this.props.nodeName} </h3>
-                <h5>{this.props.treeName}</h5>
-                <p>{this.props.college} | {this.props.major} | class of {this.props.class}</p>:
+            /* Dummy display mode to see that all variables show up */
+            <div className="BBN_div">
+                <p className = "BBN_h"> {this.props.nodeName} </p>
+                <p className="BBN_h">{this.props.treeName}</p>
+                <p className="BBN_p">{this.props.college} | {this.props.major} | class of {this.props.class}</p>
             </div>
         );
     }

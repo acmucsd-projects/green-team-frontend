@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.BBN_div{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #e7fefe;
+    padding: 10px;
+    padding-top: 0px;
+    display: inline-block;
+}
+
+p{
+    font-size: 12px;
+}
+
+.BBN_h{
+    font-weight: bold;
+}
