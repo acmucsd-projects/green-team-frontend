@@ -12,7 +12,7 @@ class BitByteNode extends React.Component{
             /* Dummy display mode to see that all variables show up */
             <div className="BBN_div">
                 <p className = "BBN_h"> {this.props.nodeName} </p>
-                <p className="BBN_h">{this.props.treeName}</p>
+                <p className="BBN_h">{this.props.treeName} ({this.props.since})</p>
                 <p className="BBN_p">{this.props.college} | {this.props.major} | class of {this.props.class}</p>
             </div>
         );
