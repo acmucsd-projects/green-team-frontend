@@ -1,5 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './BitByteNode.css'; // Dummy CSS that will be changed later
+
 import linkedin_logo from './img/linkedin_logo.png';
 import facebook_logo from './img/facebook_logo.png';
 import instagram_logo from './img/instagram_logo.png';
@@ -28,6 +30,20 @@ class BitByteNode extends React.Component{
             </div>
         );
     }
-}
+};
+
+/* Defines propTypes in BitByteNode */
+BitByteNode.propTypes ={
+    id:PropTypes.number.isRequired,
+    node_name: PropTypes.string.isRequired,
+    tree_name: PropTypes.string,
+    quarter_joined: PropTypes.string,
+    college: PropTypes.string,
+    major: PropTypes.string,
+    class_year: PropTypes.number,
+    linkedin: PropTypes.string,
+    facebook: PropTypes.string,
+    instagram: PropTypes.string,
+};
 
 export default BitByteNode;
