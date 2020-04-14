@@ -34,13 +34,16 @@ class BitByteNode extends React.Component{
 
 /* Defines propTypes in BitByteNode */
 BitByteNode.propTypes ={
-    id:PropTypes.number.isRequired,
+    // Identification props
+    id: PropTypes.number.isRequired,
     node_name: PropTypes.string.isRequired,
     tree_name: PropTypes.string,
+    // Personal info props
     quarter_joined: PropTypes.string,
     college: PropTypes.string,
     major: PropTypes.string,
     class_year: PropTypes.number,
+    // Social media props
     linkedin: PropTypes.string,
     facebook: PropTypes.string,
     instagram: PropTypes.string,
