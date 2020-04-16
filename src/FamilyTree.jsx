@@ -1,5 +1,5 @@
 import React from 'react';
-import BitByteNode from './BitByteNode.jsx';
+import BitByteLabel from './BitByteLabel.jsx';
 import Tree from 'react-d3-tree';
 import './FamilyTree.css';
 
@@ -45,7 +45,7 @@ class NodeLabel extends React.PureComponent{
         {
           this.state.isHovering && // The below info will show up on hover
           <div class = "PopUp">
-          <BitByteNode
+          <BitByteLabel
             id = {nodeData.attributes.id}
             node_name = {nodeData.attributes.node_name}
             tree_name = {nodeData.attributes.tree_name}
@@ -121,7 +121,7 @@ const bitByteTreeData = [
   },
 ];
 
-/* Return the tree */
+/* Functional component returning a div containing a tree */
 function FamilyTree() {
 
     /* Node shape */
@@ -136,6 +136,8 @@ function FamilyTree() {
             strokeWidth: 3,
         }
     }
+
+    /* Returns the actual tree content */
     return(
         <div id="treeWrapper">
             <Tree
@@ -145,7 +147,7 @@ function FamilyTree() {
                 nodeLabelComponent={{
                     render:<NodeLabel className="BitByteNodeLabel"/>,
                     foreginObjectWrapper:{
-                    y : 24 
+                    y : 12 
                 }
             }}
         />
