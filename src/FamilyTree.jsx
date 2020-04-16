@@ -41,7 +41,7 @@ class NodeLabel extends React.PureComponent{
         onMouseEnter = {this.handleMouseHover}
         onMouseLeave = {this.handleMouseHover}    
       >
-        <p>{nodeData.attributes.node_name}</p>
+        <p className="label-text">{nodeData.attributes.node_name}</p>
         {
           this.state.isHovering && // The below info will show up on hover
           <div class = "PopUp">
@@ -136,7 +136,7 @@ class FamilyTree extends React.PureComponent {
       console.log(dimensions.height)
       this.setState({
         translate: {
-          x: dimensions.width / 2,
+          x: 30,
           y: dimensions.height / 2
         }
       });
@@ -154,6 +154,7 @@ class FamilyTree extends React.PureComponent {
               y: -10,
               stroke: 'steelblue',
               strokeWidth: 3,
+              fill: 'white',
           }
       }
       return(
