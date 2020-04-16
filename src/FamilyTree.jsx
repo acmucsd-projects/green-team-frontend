@@ -121,38 +121,58 @@ const bitByteTreeData = [
   },
 ];
 
-/* Functional component returning a div containing a tree */
-function FamilyTree() {
+/** 
+ * Component returning a div containing a tree
+ * Need to declare as class for ComponentDidMount() 
+ */
+class FamilyTree extends React.PureComponent {
 
-    /* Node shape */
-    const nodeShape ={
-        shape: 'rect',
-        shapeProps: {
-            width: 20,
-            height: 20,
-            x: -10,
-            y: -10,
-            stroke: 'steelblue',
-            strokeWidth: 3,
+    state={}
+
+    /* Used to center the tree on render */
+    componentDidMount() {
+      const dimensions = this.treeContainer.getBoundingClientRect();
+      console.log(dimensions.width);
+      console.log(dimensions.height)
+      this.setState({
+        translate: {
+          x: dimensions.width / 2,
+          y: dimensions.height / 2
         }
+      });
     }
 
     /* Returns the actual tree content */
-    return(
-        <div id="treeWrapper">
-            <Tree
-                data = {bitByteTreeData}
-                nodeSvgShape = {nodeShape}
-                allowForeignObjects
-                nodeLabelComponent={{
-                    render:<NodeLabel className="BitByteNodeLabel"/>,
-                    foreginObjectWrapper:{
-                    y : 12 
-                }
-            }}
-        />
-        </div>
-    );
+    render(){
+      /* Node shape */
+        const nodeShape = {
+          shape: 'rect',
+          shapeProps: {
+              width: 20,
+              height: 20,
+              x: -10,
+              y: -10,
+              stroke: 'steelblue',
+              strokeWidth: 3,
+          }
+      }
+      return(
+          <div class="treeWrapper" ref={tc => (this.treeContainer = tc)}>
+              <Tree
+                  data = {bitByteTreeData}
+                  translate = {this.state.translate}
+                  nodeSvgShape = {nodeShape}
+                  allowForeignObjects
+                  nodeLabelComponent={{
+                      render:<NodeLabel className="BitByteNodeLabel"/>,
+                      foreginObjectWrapper:{
+                      y : 12 
+                  }
+              }}
+              />
+          </div>
+      );
+    }
 }
 
 export default FamilyTree;
