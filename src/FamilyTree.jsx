@@ -1,6 +1,7 @@
 import React from 'react';
 import BitByteNode from './BitByteNode.jsx';
 import Tree from 'react-d3-tree';
+import './FamilyTree.css';
 
 /**
  * Our custom definition of a label on the tree 
@@ -43,6 +44,7 @@ class NodeLabel extends React.PureComponent{
         <p>{nodeData.attributes.node_name}</p>
         {
           this.state.isHovering && // The below info will show up on hover
+          <div class = "PopUp">
           <BitByteNode
             id = {nodeData.attributes.id}
             node_name = {nodeData.attributes.node_name}
@@ -55,6 +57,7 @@ class NodeLabel extends React.PureComponent{
             facebook = {nodeData.attributes.facebook}
             instagram = {nodeData.attributes.instagram}
           />
+          </div>
         }
       </div>
     )
@@ -120,10 +123,24 @@ const bitByteTreeData = [
 
 /* Return the tree */
 function FamilyTree() {
+
+    /* Node shape */
+    const nodeShape ={
+        shape: 'rect',
+        shapeProps: {
+            width: 20,
+            height: 20,
+            x: -10,
+            y: -10,
+            stroke: 'steelblue',
+            strokeWidth: 3,
+        }
+    }
     return(
-        <div id="treeWrapper" style = {{width: '1000px', height:'500px'}}>
+        <div id="treeWrapper">
             <Tree
                 data = {bitByteTreeData}
+                nodeSvgShape = {nodeShape}
                 allowForeignObjects
                 nodeLabelComponent={{
                     render:<NodeLabel className="BitByteNodeLabel"/>,

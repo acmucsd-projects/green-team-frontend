@@ -1,0 +1,9 @@
+#treeWrapper{
+    min-width: 1000px;
+    min-height: 600px;
+}
+
+.PopUp{
+    position: relative;
+    z-index: 2147483647;
+}
