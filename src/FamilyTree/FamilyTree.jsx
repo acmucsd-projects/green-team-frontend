@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef,useEffect} from 'react';
 import BitByteLabel from '../BitByteLabel/BitByteLabel';
 import Tree from 'react-d3-tree';
 import './FamilyTree.css';
@@ -101,23 +101,23 @@ const bitByteTreeData = [
  * Component returning a div containing a tree
  * Need to declare as class for ComponentDidMount() 
  */
-class FamilyTree extends React.PureComponent {
+function FamilyTree() {
 
-    state={}
+    const[state, setState] = useState({translate: {X:0, y:0}})
+    const treeContainer = useRef(null)
 
     /* Used to center the tree on render */
-    componentDidMount() {
-      const dimensions = this.treeContainer.getBoundingClientRect();
-      this.setState({
+    useEffect(()=> {
+      const dimensions = treeContainer.current.getBoundingClientRect();
+      setState({
         translate: {
           x: 30,
           y: dimensions.height / 2
         }
       });
-    }
+    }, []);
 
     /* Returns the actual tree content */
-    render(){
       /* Node shape */
         const nodeShape = {
           shape: 'rect',
@@ -132,10 +132,10 @@ class FamilyTree extends React.PureComponent {
           }
       }
       return(
-          <div class="treeWrapper" ref={tc => (this.treeContainer = tc)}>
+          <div class="treeWrapper" ref={treeContainer}>
               <Tree
                   data = {bitByteTreeData}
-                  translate = {this.state.translate}
+                  translate = {state.translate}
                   nodeSvgShape = {nodeShape}
                   allowForeignObjects
                   nodeLabelComponent={{
@@ -147,7 +147,6 @@ class FamilyTree extends React.PureComponent {
               />
           </div>
       );
-    }
 }
 
 export default FamilyTree;
