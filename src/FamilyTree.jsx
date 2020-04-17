@@ -132,8 +132,6 @@ class FamilyTree extends React.PureComponent {
     /* Used to center the tree on render */
     componentDidMount() {
       const dimensions = this.treeContainer.getBoundingClientRect();
-      console.log(dimensions.width);
-      console.log(dimensions.height)
       this.setState({
         translate: {
           x: 30,
