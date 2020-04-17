@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import BitByteLabel from '../BitByteLabel/BitByteLabel';
 import Tree from 'react-d3-tree';
 import './FamilyTree.css';
@@ -8,42 +8,19 @@ import './FamilyTree.css';
  * This definition will allow us to view the information about a 
  * bit / byte by hovering over their name on the tree
  */
-class NodeLabel extends React.PureComponent{
-  
-  /* Constructor to initialize state and bind function */
-  constructor(props){
-    super(props);
-    this.handleMouseHover = this.handleMouseHover.bind(this);
-    this.state= {
-      isHovering:false
-    }
-  }
-
-  /* Event handler */
-  handleMouseHover() {
-    this.setState(this.toggleHoverState);
-  }
-
-  /* Toggles the isHovering state */
-  toggleHoverState(state){
-    return{
-      isHovering: !state.isHovering,
-    };
-  }
-
-  /* Returns the actual label*/
-  render(){
-    const{className, nodeData} = this.props
+function NodeLabel (props){
+  const [isHovering, setHovering] = useState(false);
+  const{className, nodeData} = props
     return(
       // This division will react to mouse hovering
       <div 
         className = {className} 
-        onMouseEnter = {this.handleMouseHover}
-        onMouseLeave = {this.handleMouseHover}    
+        onMouseEnter = {()=>setHovering(1)}
+        onMouseLeave = {()=>setHovering(0)}    
       >
         <p className="label-text">{nodeData.attributes.node_name}</p>
         {
-          this.state.isHovering && // The below info will show up on hover
+          isHovering && // The below info will show up on hover
           <div class = "PopUp">
           <BitByteLabel
             id = {nodeData.attributes.id}
@@ -61,7 +38,6 @@ class NodeLabel extends React.PureComponent{
         }
       </div>
     )
-  }
 }
 
 /* Hard-coded data below */
