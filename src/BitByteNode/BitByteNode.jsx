@@ -9,31 +9,28 @@ import instagram_logo from '../img/instagram_logo.png';
 /** 
  * Representes a node in the bit-byte tree
  * Declared as a class component for potential additional functions 
- */ 
-class BitByteNode extends React.Component{
-    constructor(props){super(props);}
-    render(){
-        return (
-            /* Dummy display mode to see that all variables show up */
-            <div className="BBN_div">
-                {/* Basic info */}
-                <p className = "BBN_h"> {this.props.node_name} </p>
-                <p className="BBN_h">{this.props.tree_name} ({this.props.quarter_joined})</p>
-                <p className="BBN_p">{this.props.college} | {this.props.major} | class of {this.props.class_year}</p>
+ */
+function BitByteNode(props) {
+    return (
+        /* Dummy display mode to see that all variables show up */
+        <div className="BBN_div">
+            {/* Basic info */}
+            <p className="BBN_h"> {props.node_name} </p>
+            <p className="BBN_h">{props.tree_name} ({props.quarter_joined})</p>
+            <p className="BBN_p">{props.college} | {props.major} | class of {props.class_year}</p>
 
-                {/* Social media*/}
-                <p>
-                    <a href = {this.props.linkedin}><img src={linkedin_logo} alt="linkedin"/></a>
-                    <a href = {this.props.facebook}><img src={facebook_logo} alt="facebook"/></a>
-                    <a href = {this.props.instagram}><img src={instagram_logo} alt="instagram"/></a>
-                </p>
-            </div>
-        );
-    }
+            {/* Social media*/}
+            <p>
+                <a href={props.linkedin}><img src={linkedin_logo} alt="linkedin" /></a>
+                <a href={props.facebook}><img src={facebook_logo} alt="facebook" /></a>
+                <a href={props.instagram}><img src={instagram_logo} alt="instagram" /></a>
+            </p>
+        </div>
+    );
 };
 
 /* Defines propTypes in BitByteNode */
-BitByteNode.propTypes ={
+BitByteNode.propTypes = {
     // Identification props
     id: PropTypes.number.isRequired,
     node_name: PropTypes.string.isRequired,

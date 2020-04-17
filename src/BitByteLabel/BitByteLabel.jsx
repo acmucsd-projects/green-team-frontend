@@ -8,30 +8,27 @@ import instagram_logo from '../img/instagram_logo.png';
 
 /** 
  * A concise pop-up label for the family tree
- */ 
-class BitByteLabel extends React.Component{
-    constructor(props){super(props);}
-    render(){
-        return (
-            /* Dummy display mode to see that all variables show up */
-            <div className="BBN_div">
-                {/* Social media*/}
-                <p>
-                    <a href = {this.props.linkedin}><img src={linkedin_logo} alt="linkedin"/></a>
-                    <a href = {this.props.facebook}><img src={facebook_logo} alt="facebook"/></a>
-                    <a href = {this.props.instagram}><img src={instagram_logo} alt="instagram"/></a>
-                </p>
+ */
+function BitByteLabel(props) {
+    return (
+        /* Dummy display mode to see that all variables show up */
+        <div className="BBN_div">
+            {/* Social media*/}
+            <p>
+                <a href={props.linkedin}><img src={linkedin_logo} alt="linkedin" /></a>
+                <a href={props.facebook}><img src={facebook_logo} alt="facebook" /></a>
+                <a href={props.instagram}><img src={instagram_logo} alt="instagram" /></a>
+            </p>
 
-                {/* Basic info */}
-                <p className="BBN_p"> {this.props.major} '{this.props.class_year- 2000}</p>
-                <p className="BBN_p"> {this.props.college} college</p>
-            </div>
-        );
-    }
+            {/* Basic info */}
+            <p className="BBN_p"> {props.major} '{props.class_year - 2000}</p>
+            <p className="BBN_p"> {props.college} college</p>
+        </div>
+    );
 };
 
 /* Defines propTypes in BitByteNode */
-BitByteLabel.propTypes ={
+BitByteLabel.propTypes = {
     // Identification props
     id: PropTypes.number.isRequired,
     node_name: PropTypes.string.isRequired,
