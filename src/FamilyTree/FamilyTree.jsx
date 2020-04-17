@@ -1,5 +1,5 @@
 import React from 'react';
-import BitByteLabel from './BitByteLabel.jsx';
+import BitByteLabel from '../BitByteLabel/BitByteLabel';
 import Tree from 'react-d3-tree';
 import './FamilyTree.css';
 

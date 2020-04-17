@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './BitByteNode.css'; // Dummy CSS that will be changed later
 
-import linkedin_logo from './img/linkedin_logo.png';
-import facebook_logo from './img/facebook_logo.png';
-import instagram_logo from './img/instagram_logo.png';
+import linkedin_logo from '../img/linkedin_logo.png';
+import facebook_logo from '../img/facebook_logo.png';
+import instagram_logo from '../img/instagram_logo.png';
 
 /** 
  * Representes a node in the bit-byte tree

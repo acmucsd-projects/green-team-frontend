@@ -1,5 +1,5 @@
 import React from 'react';
-import FamilyTree from './FamilyTree.jsx'
+import FamilyTree from '../FamilyTree/FamilyTree'
 import './App.css';
 
 function App() {
