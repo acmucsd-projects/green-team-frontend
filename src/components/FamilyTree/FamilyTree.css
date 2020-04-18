@@ -1,0 +1,17 @@
+.treeWrapper{
+    width: 100%;
+    height: 100vh;
+}
+
+.BitByteNodeLabel{
+    font-size: 0px;
+}
+
+.label-text{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.Popup{
+    font-size: 14;
+}

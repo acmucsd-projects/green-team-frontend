@@ -1,0 +1,49 @@
+[
+    {
+        "name": "Waggie Mao",
+        "attributes": {
+            "id": 12345678,
+            "node_name": "Waggie Wao",
+            "tree_name": "Bug - free tree",
+            "quarter_joined": "WI 20",
+            "college": "Sixth",
+            "major": "Computer Science",
+            "class_year": 2022,
+            "linkedin": "https://linkedin.com/in/YiyueMaggieMao",
+            "facebook": "https://www.facebook.com/YiyueMaggieMao",
+            "instagram": "https://www.instagram.com/maggie_maoph/"
+        },
+        "children": [
+            {
+                "name": "Judy Liu",
+                "attributes": {
+                    "id": 12345679,
+                    "node_name": "Judy Liu",
+                    "tree_name": "Bug - free tree",
+                    "quarter_joined": "WI 20",
+                    "college": "Warren",
+                    "major": "Math-CS",
+                    "class_year": 2023,
+                    "linkedin": "https://linkedin.com/in/YiyueMaggieMao",
+                    "facebook": "https://www.facebook.com/YiyueMaggieMao",
+                    "instagram": "https://www.instagram.com/maggie_maoph/"
+                }
+            },
+            {
+                "name": "Tiffany Chang",
+                "attributes": {
+                    "id": 12345680,
+                    "node_name": "Tiffany Chang",
+                    "tree_name": "Bug - free tree",
+                    "quarter_joined": "WI 20",
+                    "college": "Warren",
+                    "major": "Computer Science",
+                    "class_year": 2023,
+                    "linkedin": "https://linkedin.com/in/YiyueMaggieMao",
+                    "facebook": "https://www.facebook.com/YiyueMaggieMao",
+                    "instagram": "https://www.instagram.com/maggie_maoph/"
+                }
+            }
+        ]
+    }
+]
