@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './BitByteLabel.css'; // Dummy CSS that will be changed later
 
-import linkedin_logo from '../img/linkedin_logo.png';
-import facebook_logo from '../img/facebook_logo.png';
-import instagram_logo from '../img/instagram_logo.png';
+import linkedin_logo from '../../img/linkedin_logo.png';
+import facebook_logo from '../../img/facebook_logo.png';
+import instagram_logo from '../../img/instagram_logo.png';
 
 /** 
  * A concise pop-up label for the family tree

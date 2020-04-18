@@ -1,6 +1,7 @@
 import React, {useState, useRef,useEffect} from 'react';
 import BitByteLabel from '../BitByteLabel/BitByteLabel';
 import Tree from 'react-d3-tree';
+import treeData from '../../data/tree-data.json'
 import './FamilyTree.css';
 
 /**
@@ -40,63 +41,6 @@ function NodeLabel (props){
     )
 }
 
-/* Hard-coded data below */
-const bitByteTreeData = [
-  // Byte
-  {
-    name :'Waggie Mao',
-    
-    attributes:{
-      id: 12345678,
-      node_name : "Waggie Wao",
-      tree_name : "Bug - free tree",
-      quarter_joined : "WI 20",
-      college : "Sixth",
-      major : "Computer Science",
-      class_year : 2022,
-      linkedin : "https://linkedin.com/in/YiyueMaggieMao",
-      facebook : "https://www.facebook.com/YiyueMaggieMao",
-      instagram : "https://www.instagram.com/maggie_maoph/"
-    },
-
-    children:[
-      // Bit 1
-      {
-        name : 'Judy Liu',
-        attributes:{
-          id: 12345679,
-          node_name : "Judy Liu",
-          tree_name : "Bug - free tree",
-          quarter_joined : "WI 20",
-          college : "Warren",
-          major : "Math-CS",
-          class_year : 2023,
-          linkedin : "https://linkedin.com/in/YiyueMaggieMao",
-          facebook : "https://www.facebook.com/YiyueMaggieMao",
-         instagram : "https://www.instagram.com/maggie_maoph/"
-        },
-      },
-
-      // Bit 2
-      {
-        name : 'Tiffany Chang',
-        attributes:{
-          id: 12345680,
-          node_name : "Tiffany Chang",
-          tree_name : "Bug - free tree",
-          quarter_joined : "WI 20",
-          college : "Warren",
-          major : "Computer Science",
-          class_year : 2023,
-          linkedin : "https://linkedin.com/in/YiyueMaggieMao",
-          facebook : "https://www.facebook.com/YiyueMaggieMao",
-         instagram : "https://www.instagram.com/maggie_maoph/"
-        },
-      },
-    ],
-  },
-];
-
 /** 
  * Component returning a div containing a tree
  * Need to declare as class for ComponentDidMount() 
@@ -105,9 +49,9 @@ function FamilyTree() {
 
     const[state, setState] = useState({translate: {X:0, y:0}})
     const treeContainer = useRef(null)
-
     /* Used to center the tree on render */
     useEffect(()=> {
+      // Center tree on render
       const dimensions = treeContainer.current.getBoundingClientRect();
       setState({
         translate: {
@@ -134,7 +78,7 @@ function FamilyTree() {
       return(
           <div class="treeWrapper" ref={treeContainer}>
               <Tree
-                  data = {bitByteTreeData}
+                  data = {treeData}
                   translate = {state.translate}
                   nodeSvgShape = {nodeShape}
                   allowForeignObjects
