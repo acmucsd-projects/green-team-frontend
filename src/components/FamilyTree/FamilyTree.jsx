@@ -1,7 +1,6 @@
 import React, {useState, useRef,useEffect} from 'react';
 import BitByteLabel from '../BitByteLabel/BitByteLabel';
 import Tree from 'react-d3-tree';
-import treeData from '../../data/tree-data.json'
 import './FamilyTree.css';
 
 /**
@@ -45,7 +44,7 @@ function NodeLabel (props){
  * Component returning a div containing a tree
  * Need to declare as class for ComponentDidMount() 
  */
-function FamilyTree() {
+function FamilyTree(props) {
 
     const[state, setState] = useState({translate: {X:0, y:0}})
     const treeContainer = useRef(null)
@@ -78,7 +77,7 @@ function FamilyTree() {
       return(
           <div class="treeWrapper" ref={treeContainer}>
               <Tree
-                  data = {treeData}
+                  data = {props.treeData}
                   translate = {state.translate}
                   nodeSvgShape = {nodeShape}
                   allowForeignObjects
