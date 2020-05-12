@@ -2,8 +2,14 @@
   text-align: center;
 }
 
+.tree-profile{
+  padding-bottom: 50px; /* Leaves space between profile and tree */
+  height: 35vh;
+}
+
 .tree{
-  padding-top: 50px; /* Leaves space between profile and tree */
+  border:2px solid black;
+  height: 50vh;
 }
 
 .App-logo {
