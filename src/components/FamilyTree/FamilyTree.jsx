@@ -21,7 +21,7 @@ function NodeLabel (props){
         <p className="label-text">{nodeData.attributes.node_name}</p>
         {
           isHovering && // The below info will show up on hover
-          <div class = "PopUp">
+          <div className = "PopUp">
           <BitByteLabel
             id = {nodeData.attributes.id}
             node_name = {nodeData.attributes.node_name}
@@ -75,7 +75,7 @@ function FamilyTree(props) {
           }
       }
       return(
-          <div class="treeWrapper" ref={treeContainer}>
+          <div className="treeWrapper" ref={treeContainer}>
               <Tree
                   data = {props.treeData}
                   translate = {state.translate}

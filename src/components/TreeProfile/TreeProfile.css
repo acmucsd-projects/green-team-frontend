@@ -1,0 +1,32 @@
+.profile-wrapper{
+    margin-left: 20px;
+    overflow: auto;
+    display: flex;
+}
+
+/* Split content half and half */
+.left{
+    float: left;
+    width: 50%;
+    min-height: 100%;
+    position: relative;
+}
+
+.right{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    min-height: 100%;
+    height: 100%;
+}
+
+.points{
+    bottom: 0px;
+    position: absolute;
+}
+
+.treePhoto{
+    width: 260px;
+    height: 175px;
+}
