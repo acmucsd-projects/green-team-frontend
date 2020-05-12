@@ -4,7 +4,7 @@
     display: flex;
 }
 
-/* Split content half and half */
+/* Left half: Tree name, description, points */
 .left{
     float: left;
     width: 50%;
@@ -12,16 +12,17 @@
     position: relative;
 }
 
+.points{
+    bottom: 0px;
+    position: absolute;
+}
+
+/* Right half: Horizontally centered photo */
 .right{
     margin-top: 30px;
     display: flex;
     justify-content: center;
     width: 50%;
-}
-
-.points{
-    bottom: 0px;
-    position: absolute;
 }
 
 .treePhoto{

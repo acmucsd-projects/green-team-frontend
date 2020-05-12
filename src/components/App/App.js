@@ -18,7 +18,7 @@ function App() {
         />
       </div>
       {/* Actual tree */}
-      <div>
+      <div className = "tree">
         <FamilyTree treeData={treeData}/>
       </div>
     </div>

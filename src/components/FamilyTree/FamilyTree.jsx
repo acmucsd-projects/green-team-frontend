@@ -18,7 +18,10 @@ function NodeLabel (props){
         onMouseEnter = {()=>setHovering(1)}
         onMouseLeave = {()=>setHovering(0)}    
       >
-        <p className="label-text">{nodeData.attributes.node_name}</p>
+        <div className="label-text">
+          {nodeData.attributes.node_name}<br/>
+          ({nodeData.attributes.class_year})
+        </div>
         {
           isHovering && // The below info will show up on hover
           <div className = "PopUp">
@@ -54,25 +57,23 @@ function FamilyTree(props) {
       const dimensions = treeContainer.current.getBoundingClientRect();
       setState({
         translate: {
-          x: 30,
-          y: dimensions.height / 2
+          x: dimensions.width / 2,
+          y: 30
         }
       });
     }, []);
 
     /* Returns the actual tree content */
       /* Node shape */
-        const nodeShape = {
-          shape: 'rect',
-          shapeProps: {
-              width: 20,
-              height: 20,
-              x: -10,
-              y: -10,
-              stroke: 'steelblue',
-              strokeWidth: 3,
-              fill: 'white',
-          }
+      const nodeShape = {
+        shape: 'image',
+        shapeProps: {
+            width: 60,
+            height: 60,
+            x: -30,
+            y: -30,
+            href:"https://i.ibb.co/1n5F04c/tree-node.png", // Local links don't work somehow
+        }
       }
       return(
           <div className="treeWrapper" ref={treeContainer}>
@@ -80,6 +81,8 @@ function FamilyTree(props) {
                   data = {props.treeData}
                   translate = {state.translate}
                   nodeSvgShape = {nodeShape}
+                  orientation =  "vertical"
+                  pathFunc = "straight"
                   allowForeignObjects
                   nodeLabelComponent={{
                       render:<NodeLabel className="BitByteNodeLabel"/>,

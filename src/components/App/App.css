@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.tree{
+  padding-top: 50px; /* Leaves space between profile and tree */
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
