@@ -1,5 +1,6 @@
 .profile-wrapper{
-    margin-left: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
     overflow: auto;
     display: flex;
 }
@@ -15,18 +16,26 @@
 .points{
     bottom: 0px;
     position: absolute;
+    display: flex;
+}
+
+.PointSection{
+    display: inline;
+}
+
+#inactive{
+    color: red;
 }
 
 /* Right half: Horizontally centered photo */
 .right{
     margin-top: 30px;
-    display: flex;
-    justify-content: center;
     width: 50%;
+    text-align: right;
 }
 
 .treePhoto{
     width: 260px;
     height: 175px;
-    border-radius: 5px;
+    border-radius: 3px;
 }
