@@ -19,3 +19,20 @@ img{
     margin-right: 5px;
     margin-bottom: 0px;
 }
+
+a{
+    font-size: 8px;
+    color: #0a7cf5;
+}
+
+a:hover{
+    color: #54a3f8;
+}
+
+a:visited{
+    color: #0a7cf5;
+}
+
+a:visited:hover{
+    color: #54a3f8;
+}

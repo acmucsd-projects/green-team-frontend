@@ -23,6 +23,7 @@ function BitByteLabel(props) {
             {/* Basic info */}
             <p className="BBN_p"> {props.major} '{props.class_year - 2000}</p>
             <p className="BBN_p"> {props.college} college</p>
+                <a href={props.profile_link}>ACM membership profile</a>
         </div>
     );
 };
@@ -42,6 +43,7 @@ BitByteLabel.propTypes = {
     linkedin: PropTypes.string,
     facebook: PropTypes.string,
     instagram: PropTypes.string,
+    profile_link: PropTypes.string,
 };
 
 export default BitByteLabel;

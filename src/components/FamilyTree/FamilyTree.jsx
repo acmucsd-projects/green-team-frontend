@@ -36,6 +36,7 @@ function NodeLabel (props){
             linkedin = {nodeData.attributes.linkedin}
             facebook = {nodeData.attributes.facebook}
             instagram = {nodeData.attributes.instagram}
+            profile_link = {nodeData.attributes.profile_link}
           />
           </div>
         }
