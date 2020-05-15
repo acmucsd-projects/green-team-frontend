@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './BitByteLabel.css'; // Dummy CSS that will be changed later
 
-import linkedin_logo from '../../img/linkedin_logo.png';
-import facebook_logo from '../../img/facebook_logo.png';
-import instagram_logo from '../../img/instagram_logo.png';
+import facebook_logo from '../../img/profileicon_1.png'; // Facebook, workaround for adblock
+import instagram_logo from '../../img/profileicon_2.png'; // Instagram, workaround for adblock
+import linkedin_logo from '../../img/profileicon_3.png'; // LinkedIn, workaround for adblock
 
 /** 
  * A concise pop-up label for the family tree
@@ -15,14 +15,15 @@ function BitByteLabel(props) {
         <div className="BBN_div">
             {/* Social media*/}
             <p>
-                <a href={props.linkedin}><img src={linkedin_logo} alt="linkedin" /></a>
-                <a href={props.facebook}><img src={facebook_logo} alt="facebook" /></a>
-                <a href={props.instagram}><img src={instagram_logo} alt="instagram" /></a>
+                <a href={props.facebook}><img src={facebook_logo} alt="profile_1" /></a>
+                <a href={props.instagram}><img src={instagram_logo} alt="profile_2" /></a>
+                <a href={props.linkedin}><img src={linkedin_logo} alt="profile_3" /></a>
             </p>
 
             {/* Basic info */}
             <p className="BBN_p"> {props.major} '{props.class_year - 2000}</p>
             <p className="BBN_p"> {props.college} college</p>
+                <a href={props.profile_link}>ACM membership profile</a>
         </div>
     );
 };
@@ -42,6 +43,7 @@ BitByteLabel.propTypes = {
     linkedin: PropTypes.string,
     facebook: PropTypes.string,
     instagram: PropTypes.string,
+    profile_link: PropTypes.string,
 };
 
 export default BitByteLabel;

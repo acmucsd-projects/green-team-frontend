@@ -1,7 +1,6 @@
 import React, {useState, useRef,useEffect} from 'react';
 import BitByteLabel from '../BitByteLabel/BitByteLabel';
 import Tree from 'react-d3-tree';
-import treeData from '../../data/tree-data.json'
 import './FamilyTree.css';
 
 /**
@@ -19,10 +18,13 @@ function NodeLabel (props){
         onMouseEnter = {()=>setHovering(1)}
         onMouseLeave = {()=>setHovering(0)}    
       >
-        <p className="label-text">{nodeData.attributes.node_name}</p>
+        <div className="label-text">
+          {nodeData.attributes.node_name}<br/>
+          ({nodeData.attributes.class_year})
+        </div>
         {
           isHovering && // The below info will show up on hover
-          <div class = "PopUp">
+          <div className = "PopUp">
           <BitByteLabel
             id = {nodeData.attributes.id}
             node_name = {nodeData.attributes.node_name}
@@ -34,6 +36,7 @@ function NodeLabel (props){
             linkedin = {nodeData.attributes.linkedin}
             facebook = {nodeData.attributes.facebook}
             instagram = {nodeData.attributes.instagram}
+            profile_link = {nodeData.attributes.profile_link}
           />
           </div>
         }
@@ -45,7 +48,7 @@ function NodeLabel (props){
  * Component returning a div containing a tree
  * Need to declare as class for ComponentDidMount() 
  */
-function FamilyTree() {
+function FamilyTree(props) {
 
     const[state, setState] = useState({translate: {X:0, y:0}})
     const treeContainer = useRef(null)
@@ -55,32 +58,32 @@ function FamilyTree() {
       const dimensions = treeContainer.current.getBoundingClientRect();
       setState({
         translate: {
-          x: 30,
-          y: dimensions.height / 2
+          x: dimensions.width / 2,
+          y: 30
         }
       });
     }, []);
 
     /* Returns the actual tree content */
       /* Node shape */
-        const nodeShape = {
-          shape: 'rect',
-          shapeProps: {
-              width: 20,
-              height: 20,
-              x: -10,
-              y: -10,
-              stroke: 'steelblue',
-              strokeWidth: 3,
-              fill: 'white',
-          }
+      const nodeShape = {
+        shape: 'image',
+        shapeProps: {
+            width: 60,
+            height: 60,
+            x: -30,
+            y: -30,
+            href:"https://i.ibb.co/1n5F04c/tree-node.png", // Local links don't work somehow
+        }
       }
       return(
-          <div class="treeWrapper" ref={treeContainer}>
+          <div className="treeWrapper" ref={treeContainer}>
               <Tree
-                  data = {treeData}
+                  data = {props.treeData}
                   translate = {state.translate}
                   nodeSvgShape = {nodeShape}
+                  orientation =  "vertical"
+                  pathFunc = "straight"
                   allowForeignObjects
                   nodeLabelComponent={{
                       render:<NodeLabel className="BitByteNodeLabel"/>,
