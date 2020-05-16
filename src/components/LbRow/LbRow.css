@@ -1,0 +1,19 @@
+.table-row{
+    background-color: #cccccc;
+    display: flex;
+    width: 60%;
+    margin: 5px 0px 5px 0px;
+    padding: 10px 2px 5px 10px;
+}
+
+#rank{
+    width: 20%
+}
+
+#tree-name{
+    width: 60%
+}
+
+#points{
+    width:20%
+}

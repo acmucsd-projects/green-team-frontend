@@ -1,0 +1,30 @@
+.table{
+    justify-content: center;
+    min-width: 100%;
+    margin-left: 20%;
+}
+
+.table-heading{
+    background-color: white;
+    display: flex;
+    width: 60%;
+    margin: 5px 0px 5px 0px;
+    padding: 10px 2px 5px 10px;
+    font-weight: bold;
+}
+
+#heading-rank{
+    width: 20%
+}
+
+#heading-tree-name{
+    width: 60%
+}
+
+#heading-points{
+    width:20%
+}
+
+LbRow{
+    align-self: center;
+}

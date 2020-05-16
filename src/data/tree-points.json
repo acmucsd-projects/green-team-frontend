@@ -1,0 +1,25 @@
+[
+    {
+        "tree_name": "Big Snacc Tree",
+        "points": 2,
+        "active": true
+    },
+
+    {
+        "tree_name": "Bug-free Tree",
+        "points": 3,
+        "active": true
+    },
+
+    {
+        "tree_name": "Inactive Tree",
+        "points": 6,
+        "active": false
+    },
+
+    {
+        "tree_name": "Tired Tree",
+        "points": 1,
+        "active": true
+    }
+]
