@@ -1,6 +1,6 @@
 import React from 'react';
 import './Leaderboard.css';
-import LbRow from '../LbRow/LbRow';
+import LbRow from '../../components/LbRow/LbRow';
 import points from '../../data/tree-points.json';
 
 var rank = 0;
