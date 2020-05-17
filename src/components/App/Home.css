@@ -1,0 +1,39 @@
+.Home {
+  padding-top: 5em;
+  margin: 0 5vw;
+  min-height: 100vh;
+}
+
+.Home.h1 {
+  padding: 1em 0;
+  font-size: 3em;
+  font-weight: bolder;
+}
+
+.Home.img {
+  max-width: 30vw - 5vw;
+  max-height: 50vh;
+}
+
+.Home.tree-image {
+  padding-bottom: 1em;
+}
+
+.Home.b {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.Home.home-text {
+  font-size: 1.5em;
+  padding-bottom: 1em;
+}
+
+.Home.home-description {
+  width: 60vw - 5vw;
+  padding-right: 10vw;
+}
+
+.Home.home-info {
+  display: inline-flex;
+}
