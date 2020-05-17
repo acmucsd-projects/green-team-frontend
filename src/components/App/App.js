@@ -3,12 +3,16 @@ import FamilyTree from '../FamilyTree/FamilyTree'
 import TreeProfile from '../TreeProfile/TreeProfile'
 import treeData from '../../data/tree-data.json'
 import treePhoto from '../../img/tree_profiles/bug_free_tree.jpg'
+
+import NavBar from '../NavBar';
+
 import './App.css';
 
 function App() {
   return (
     <div>
       {/* Tree profile section */}
+      <NavBar />
       <div className="tree-profile">
         <TreeProfile 
           treeName="Bug-free Tree" 
