@@ -80,6 +80,7 @@ function Leaderboard() {
 
     // Attributes used for rendering the leaderboard body
     var rank = 0;
+    const currYear = new Date().getFullYear();
     const sortedData = state.ranks;
 
     /* Basically all the active trees with the first tree having the top rank */
@@ -92,22 +93,23 @@ function Leaderboard() {
 
     return (
         <div>
-            <div className="filters">
-                {/* Allows user to sort by different methods */}
-                <label htmlFor="sortBy">Sort by: </label>
-                <select name="sortBy" className="sortBy" value={state.sortBy} onChange={changeSortBy}>
-                    <option value="first-to-last">First to Last</option>
-                    <option value="last-to-first">Last to First</option>
-                    <option value="a-to-z">A to Z</option>
-                    <option value="z-to-a">Z to A</option>
-                </select>
+            <div className="header-section">
+                <h1>Leaderboard</h1>
+                <div className="filters">
+                    {/* Allows user to sort by different methods */}
+                    <label htmlFor="sortBy">Sort by: {'\u00a0'}</label>
+                    <select name="sortBy" className="sortBy" value={state.sortBy} onChange={changeSortBy}>
+                        <option value="first-to-last">First to Last</option>
+                        <option value="last-to-first">Last to First</option>
+                        <option value="a-to-z">A to Z</option>
+                        <option value="z-to-a">Z to A</option>
+                    </select>
+                </div>
             </div>
             {/* The table with heading and sorted content */}
             <div className="table">
                 <div className="table-heading">
-                    <div id="heading-rank">Rank</div>
-                    <div id="heading-tree-name">Tree Name</div>
-                    <div id="heading-points">Points</div>
+                    <h1>Family Trees in {currYear}</h1>
                 </div>
                 {lbBody}
             </div>
