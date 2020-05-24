@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css';
-import FamilyTree from '../FamilyTree/FamilyTree'
-import TreeProfile from '../TreeProfile/TreeProfile'
+import FamilyTree from '../../components/FamilyTree/FamilyTree'
+import TreeProfile from '../../components/TreeProfile/TreeProfile'
 import treeData from '../../data/tree-data.json'
 
 function Home() {
