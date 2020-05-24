@@ -1,0 +1,39 @@
+.header-section{
+    margin-left: 5%;
+}
+
+.filters{
+    margin: 35px 0 35px 0;
+    font-size: 20px;
+}
+
+select{
+    font-size: 20px;
+}
+
+.table{
+    justify-content: center;
+    min-width: 100%;
+    margin-left: 5%;
+}
+
+.table-heading{
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+#heading-rank{
+    width: 20%
+}
+
+#heading-tree-name{
+    width: 60%
+}
+
+#heading-points{
+    width:20%
+}
+
+LbRow{
+    align-self: center;
+}
