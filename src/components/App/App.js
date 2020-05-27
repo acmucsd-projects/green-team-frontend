@@ -6,6 +6,7 @@ import About from '../../pages/About/About';
 import Home from '../../pages/Home/Home';
 import TreeHome from '../../pages/TreeHome/TreeHome';
 import Leaderboard from '../../pages/Leaderboard/Leaderboard';
+import Glossary from '../../pages/Glossary/Glossary';
 
 import './App.css';
 
@@ -15,6 +16,9 @@ function App() {
       <div className="App">
         <NavBar />
         <Switch>
+          <Route path="/glossary">
+            <Glossary />
+          </Route>
           <Route path="/about">
             <About />
           </Route>
