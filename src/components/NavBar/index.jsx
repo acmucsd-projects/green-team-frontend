@@ -46,7 +46,7 @@ const NavBar = () => {
             <li>About Us</li>
           </Link>
           <Link to="/leaderboard">
-            <li>About Us</li>
+            <li>Leaderboard</li>
           </Link>
           <Link to="/">
             <li>Glossary</li>
