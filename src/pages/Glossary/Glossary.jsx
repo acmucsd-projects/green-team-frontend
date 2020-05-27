@@ -34,6 +34,7 @@ function Glossary(){
 
     return(
         <div>
+            <h1 className="heading">Glossary</h1>
             <div className="glossary-body">
                 {glossary}
             </div>

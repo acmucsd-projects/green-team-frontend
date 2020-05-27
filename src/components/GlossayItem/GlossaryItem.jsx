@@ -1,9 +1,10 @@
 import React from 'react';
+import './style.css';
 
 function GlossaryItem (props){
     return(
-        <div>
-            <a href={props.to}>{props.itemName}</a>
+        <div className="glossary-item">
+            <a className="glossary-link" href={props.to}>{props.itemName}</a>
         </div>
     );
 };
