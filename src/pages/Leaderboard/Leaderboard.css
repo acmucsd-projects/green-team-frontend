@@ -1,33 +1,29 @@
-.filters{
+.filters {
     margin: 35px 0 35px 0;
     font-size: 20px;
 }
 
-select{
+select {
     font-size: 20px;
 }
 
-.table{
+.table {
     min-width: 96%;
 }
 
-.table-heading{
+.table-heading {
     margin-bottom: 40px;
     font-weight: bold;
 }
 
-#heading-rank{
+#heading-rank {
     width: 20%
 }
 
-#heading-tree-name{
+#heading-tree-name {
     width: 60%
 }
 
-#heading-points{
+#heading-points {
     width:20%
-}
-
-LbRow{
-    align-self: center;
 }
