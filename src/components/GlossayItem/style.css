@@ -1,0 +1,24 @@
+.glossary-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.glossary-link {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+}
+
+.glossary-link:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.glossary-link:visited {
+    color: black;
+}
+
+.glossary-link:visited:hover {
+    color: black;
+    text-decoration: underline;
+}

@@ -1,0 +1,10 @@
+.heading{
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.glossary-body{
+    -webkit-column-count: 5; /* Chrome, Safari, Opera */
+    -moz-column-count: 5; /* Firefox */
+    column-count: 4;
+}
