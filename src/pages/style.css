@@ -73,49 +73,42 @@
     margin-left: 5%;
 }
 
-.header-section{
+.header-section {
     padding-top: 8em;
-    justify-content: center;
+    text-align: left;
+    margin: 0 5vw;
 }
 
-.leader-title {
-    font-size: 1.5em;
+.filters {
+    margin: 1.5em 0;
+    font-size: 1em;
 }
 
-.filters{
-    margin: 35px 0 35px 0;
-    font-size: 20px;
+select {
+    font-size: 1em;
 }
 
-select{
-    font-size: 20px;
-}
-
-.table{
+.table {
     justify-content: center;
     min-width: 80%;
-    margin-left: 5%;
+    margin-left: 3vw;
 }
 
-.table-heading{
+.table-heading {
     margin-bottom: 40px;
     font-weight: bold;
 }
 
-#heading-rank{
+#heading-rank {
     width: 20%
 }
 
-#heading-tree-name{
+#heading-tree-name {
     width: 60%
 }
 
-#heading-points{
+#heading-points {
     width:20%
-}
-
-LbRow{
-    align-self: center;
 }
 
 .tree-profile {
