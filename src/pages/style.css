@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  font-family: 'Nunito';
+}
+
+.About {
+  padding-top: 8em;
+  margin: 0 5vw;
+  min-height: 100vh;
+}
+
+.h1 {
+  padding: 1em 0;
+  font-size: 3em;
+  font-weight: bolder;
+  align-items: left;
+}
+
+.b {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.text {
+  font-size: 1.5em;
+  padding-bottom: 1em;
+  text-align: left;
+}
+
+.faq-text {
+  text-align: left;
+  font-size: 1.2em;
+}
+
+.title {
+  text-align: left;
+}
+
+.Home {
+  padding-top: 8em;
+  margin: 0 5vw;
+  min-height: 100vh;
+}
+
+.img {
+  max-width: 30vw - 5vw;
+  max-height: 50vh;
+}
+
+.tree-image {
+  padding-bottom: 1em;
+}
+
+.description {
+  width: 60vw - 5vw;
+  padding-right: 10vw;
+}
+
+.Home.info {
+  display: inline-flex;
+  text-align: left;
+}
+
+.tree{
+    margin-left: 5%;
+}
+
+.header-section{
+    padding-top: 8em;
+    justify-content: center;
+}
+
+.leader-title {
+    font-size: 1.5em;
+}
+
+.filters{
+    margin: 35px 0 35px 0;
+    font-size: 20px;
+}
+
+select{
+    font-size: 20px;
+}
+
+.table{
+    justify-content: center;
+    min-width: 80%;
+    margin-left: 5%;
+}
+
+.table-heading{
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+#heading-rank{
+    width: 20%
+}
+
+#heading-tree-name{
+    width: 60%
+}
+
+#heading-points{
+    width:20%
+}
+
+LbRow{
+    align-self: center;
+}
+
+.tree-profile {
+    padding-top: 8em;
+}
