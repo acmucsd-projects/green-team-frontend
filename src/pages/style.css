@@ -50,10 +50,6 @@
   min-height: 100vh;
 }
 
-.img {
-  max-width: 30vw - 5vw;
-  max-height: 50vh;
-}
 
 .tree-image {
   padding-bottom: 1em;
