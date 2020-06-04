@@ -16,7 +16,7 @@
 }
 
 .points{
-    bottom: 0px;
+    bottom: 10px;
     position: absolute;
     display: flex;
 }
@@ -33,10 +33,11 @@
 .right{
     width: 50%;
     text-align: right;
+    margin-top: 1em;
 }
 
 .treePhoto{
-    width: 30vw;
-    height: 39vh;
+    width: 24vw;
+    height: 36vh;
     border-radius: 1em;
 }
