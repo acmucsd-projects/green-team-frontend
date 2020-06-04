@@ -55,7 +55,7 @@ const NavBar = () => {
           <Link to="/leaderboard">
             <li>Leaderboard</li>
           </Link>
-          <Link to="/">
+          <Link to="/glossary">
             <li>Glossary</li>
           </Link>
           </div>
