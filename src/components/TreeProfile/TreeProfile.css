@@ -1,20 +1,22 @@
 .profile-wrapper{
     margin-left: 5%;
     margin-right: 5%;
+    height: 40vh;
+    font-size: 1em;
+    text-align: left;
     overflow: auto;
     display: flex;
 }
 
 /* Left half: Tree name, description, points */
 .left{
-    float: left;
     width: 50%;
     min-height: 100%;
     position: relative;
 }
 
 .points{
-    bottom: 0px;
+    bottom: 10px;
     position: absolute;
     display: flex;
 }
@@ -29,13 +31,13 @@
 
 /* Right half: Horizontally centered photo */
 .right{
-    margin-top: 30px;
     width: 50%;
     text-align: right;
+    margin-top: 1em;
 }
 
 .treePhoto{
-    width: 260px;
-    height: 175px;
-    border-radius: 3px;
+    width: 24vw;
+    height: 36vh;
+    border-radius: 1em;
 }

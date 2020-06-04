@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Leaderboard.css';
+import '../style.css';
 import LbRow from '../../components/LbRow/LbRow';
 import ranks from '../../data/tree-points.json';
 
@@ -75,7 +75,7 @@ function Leaderboard() {
     /* Calls sortLb on component mount */
     useEffect(() =>{
             sortDescending("points");
-        } 
+        }
     ,[]);
 
     // Attributes used for rendering the leaderboard body
@@ -94,10 +94,12 @@ function Leaderboard() {
     return (
         <div>
             <div className="header-section">
+              <div className="leader-title">
                 <h1>Leaderboard</h1>
+              </div>
                 <div className="filters">
                     {/* Allows user to sort by different methods */}
-                    <label htmlFor="sortBy">Sort by: {'\u00a0'}</label>
+                    <label htmlFor="sortBy">Select a method to sort by: {'\u00a0'}</label>
                     <select name="sortBy" className="sortBy" value={state.sortBy} onChange={changeSortBy}>
                         <option value="first-to-last">First to Last</option>
                         <option value="last-to-first">Last to First</option>
@@ -105,12 +107,12 @@ function Leaderboard() {
                         <option value="z-to-a">Z to A</option>
                     </select>
                 </div>
+                <div className="table-heading">
+                    <h2>Family Trees in {currYear}</h2>
+                </div>
             </div>
             {/* The table with heading and sorted content */}
             <div className="table">
-                <div className="table-heading">
-                    <h1>Family Trees in {currYear}</h1>
-                </div>
                 {lbBody}
             </div>
         </div>

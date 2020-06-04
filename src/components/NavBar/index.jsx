@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ACMLogo from '../../assets/acm.svg';
+import ACMLogo from '../../assets/acmtree.svg';
 import MenuButtonIcon from '../../assets/menubutton.svg';
 import CloseMenuButton from '../../assets/closemenubutton.svg';
 import { Link } from 'react-router-dom';
@@ -22,13 +22,18 @@ const NavBar = () => {
     }
   };
 
+  let styles = {
+    width: '150px',
+    height: '50px'
+  };
+
   return (
     <div className="fixed-nav">
       <div className="navbar-div">
         <ul className="navbar">
           <li>
             <Link to="/">
-              <img src={ACMLogo} alt="ACM Logo" />
+              <img src={ACMLogo} alt="ACM Logo" style={styles}/>
             </Link>
           </li>
           <li>
@@ -39,6 +44,8 @@ const NavBar = () => {
               Admin
             </a>
           </li>
+
+          <div className="navbar-pages">
           <Link to="/">
             <li>Home</li>
           </Link>
@@ -51,6 +58,8 @@ const NavBar = () => {
           <Link to="/glossary">
             <li>Glossary</li>
           </Link>
+          </div>
+
         </ul>
       </div>
       <div className="navbar-mobile-div">
@@ -71,7 +80,9 @@ const NavBar = () => {
       <div className="mobile-links">
         <ul className="navbar">
           <li>
-            <img src={ACMLogo} alt="ACM Logo" />
+            <Link to="/">
+              <img src={ACMLogo} alt="ACM Logo" style={styles}/>
+            </Link>
           </li>
           <li>
             <a
@@ -81,18 +92,21 @@ const NavBar = () => {
               Admin
             </a>
           </li>
-          <Link to="/">
-            <li>Home</li>
-          </Link>
-          <Link to="/about">
-            <li>About Us</li>
-          </Link>
-          <Link to="/leaderboard">
-            <li>About Us</li>
-          </Link>
-          <Link to="/">
-            <li>Glossary</li>
-          </Link>
+          <div className="navbar-pages">
+            <Link to="/">
+              <li>Home</li>
+            </Link>
+            <Link to="/about">
+              <li>About Us</li>
+            </Link>
+            <Link to="/leaderboard">
+              <li>Leaderboard</li>
+            </Link>
+            <Link to="/">
+              <li>Glossary</li>
+            </Link>
+          </div>
+
         </ul>
       </div>
     </div>

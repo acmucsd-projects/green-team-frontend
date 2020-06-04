@@ -33,7 +33,7 @@ function Glossary(){
     });
 
     return(
-        <div>
+        <div className="glossary">
             <h1 className="heading">Glossary</h1>
             <div className="glossary-body">
                 {glossary}

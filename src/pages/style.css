@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  font-family: 'Nunito';
+}
+
+.About {
+  padding-top: 8em;
+  margin: 0 5vw;
+  min-height: 100vh;
+}
+
+.h1 {
+  padding: 1em 0;
+  font-size: 3em;
+  font-weight: bolder;
+  align-items: left;
+}
+
+.b {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.text {
+  font-size: 1.5em;
+  padding-bottom: 1em;
+  text-align: left;
+}
+
+.faq-text {
+  text-align: left;
+  font-size: 1.2em;
+}
+
+.title {
+  text-align: left;
+}
+
+.Home {
+  padding-top: 8em;
+  margin: 0 5vw;
+  min-height: 100vh;
+}
+
+
+.tree-image {
+  padding-bottom: 1em;
+}
+
+.description {
+  width: 60vw - 5vw;
+  padding-right: 10vw;
+}
+
+.Home.info {
+  display: inline-flex;
+  text-align: left;
+}
+
+.tree{
+    margin-left: 5%;
+}
+
+.header-section {
+    padding-top: 8em;
+    text-align: left;
+    margin: 0 5vw;
+}
+
+.filters {
+    margin: 1.5em 0;
+    font-size: 1em;
+}
+
+select {
+    font-size: 1em;
+}
+
+.table {
+    justify-content: center;
+    min-width: 80%;
+    margin-left: 3vw;
+}
+
+.table-heading {
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+#heading-rank {
+    width: 20%
+}
+
+#heading-tree-name {
+    width: 60%
+}
+
+#heading-points {
+    width:20%
+}
+
+.tree-profile {
+    padding-top: 8em;
+}
+
+.glossary {
+  padding-top: 8em;
+}
